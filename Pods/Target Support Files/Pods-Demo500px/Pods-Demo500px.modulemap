@@ -1,0 +1,6 @@
+framework module Pods_Demo500px {
+  umbrella header "Pods-Demo500px-umbrella.h"
+
+  export *
+  module * { export * }
+}
