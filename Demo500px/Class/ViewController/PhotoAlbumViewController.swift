@@ -9,18 +9,33 @@
 import UIKit
 
 class PhotoAlbumViewController: UIViewController {
+    
+    var category: Category!
+    lazy private var oDataSourcePhoto: PhotoResource? = PhotoResource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = category.name
     }
+    
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        oDataSourcePhoto?.getPhotos(feature: category.name, completion: { (response: GetPhotosResponse?, error: Error?) in
+            print("\(response?.feature) : \(response?.photos.count)")
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        oDataSourcePhoto = nil
+    }
 
     /*
     // MARK: - Navigation
