@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0377F949FA02CDFE28B57EEDE70F6D47</key>
+		<key>069FE6AF4EF53EAC41AC10E1F731D28A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<key>0B91AC97EAD4A493204A9CDE3103F94F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1DE93A359FA21F91DFBE81309E851A4A</key>
+		<key>3AC315E0C9E1356E3FF5D0133CBEF78A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>292A26F3ABC40D6FEF2D43B625C50094</key>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CD2E044D77F00A4E03AFF64F442F048</key>
+		<key>5F22D5BEAED137C0127B35E6164B7C17</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDFCE8C6E7D966F01AFCEA3E0F75D246</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<key>8B3094EEE116AFFF66C82AEBED826521</key>
 		<dict>
 			<key>primary</key>
 			<true/>

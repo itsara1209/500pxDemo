@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 enum PX500APIService : Int {
     
@@ -19,7 +18,7 @@ enum PX500APIService : Int {
     func path() -> String {
         switch self {
         case .GetPhotos:
-            return "/emergencyNews/create"
+            return "/photos"
         }
     }
     
@@ -36,19 +35,7 @@ enum PX500APIService : Int {
 
 class PX500API: NSObject {
     
-    class func buildRequest(service: PX500APIService, bodyDictionary: NSDictionary? = nil) -> URLRequest? {
-        if let url = URL(string: service.fullHost()) {
-            var request = URLRequest(url: url)
-            request.httpMethod = service.methodType().rawValue
-            if let bodyDic = bodyDictionary {
-                let objectJson = JSON(bodyDic)
-                print("RequestBody : \(objectJson)")
-                request.httpBody = try! objectJson.rawData()
-            }
-            return request
-        }
-        else {
-            return nil
-        }
+    class func buildRequest(service: PX500APIService, parameters: Parameters? = nil) -> DataRequest? {
+        return Alamofire.request(service.fullHost(), method: service.methodType(), parameters: parameters, encoding: URLEncoding.default, headers: nil)
     }
 }

@@ -14,4 +14,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    class func getIdentifier() -> String{
+        return "PhotoCollectionViewCell"
+    }
 }

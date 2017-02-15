@@ -16,6 +16,9 @@ struct Photo{
     var images : [Image]!
     var name : String!
     var user : User!
+    
+    var imageSquare : String!
+    var imageFull : String!
 
     init(fromJson json: JSON!){
         if json.isEmpty{
@@ -28,6 +31,12 @@ struct Photo{
         for imagesJson in imagesArray{
             let value = Image(fromJson: imagesJson)
             images.append(value)
+            if (value.size == ImageSize.Square280px.rawValue) {
+                imageSquare = value.url
+            }
+            else {
+                imageFull = value.url
+            }
         }
         name = json["name"].stringValue
         let userJson = json["user"]

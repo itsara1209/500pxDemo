@@ -12,11 +12,13 @@ import SwiftyJSON
 struct Image{
     
     var url : String!
+    var size : Int!
     
     init(fromJson json: JSON!){
         if json.isEmpty{
             return
         }
         url = json["url"].stringValue
+        size = json["size"].intValue
     }
 }

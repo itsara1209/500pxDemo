@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class PhotoAlbumViewController: UIViewController {
     
+    @IBOutlet var oManagerContent: ContentCollectionManager!
+    @IBOutlet weak var oCollectionViewContent: UICollectionView!
     var category: Category!
     lazy private var oDataSourcePhoto: PhotoResource? = PhotoResource()
 
@@ -17,14 +20,25 @@ class PhotoAlbumViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = category.name
+        
+        oManagerContent.collectionView = oCollectionViewContent
+        oManagerContent.delegate = self
     }
     
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         oDataSourcePhoto?.getPhotos(feature: category.name, completion: { (response: GetPhotosResponse?, error: Error?) in
-            print("\(response?.feature) : \(response?.photos.count)")
+            if let photos = response?.photos {
+                self.oManagerContent.contentList = []
+                self.oManagerContent.contentList = photos
+                self.oManagerContent.collectionView.reloadData()
+            }
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
         })
     }
     
@@ -35,6 +49,7 @@ class PhotoAlbumViewController: UIViewController {
     
     deinit {
         oDataSourcePhoto = nil
+        oManagerContent = nil
     }
 
     /*
@@ -47,4 +62,14 @@ class PhotoAlbumViewController: UIViewController {
     }
     */
 
+}
+
+extension PhotoAlbumViewController: ContentCollectionManagerDelegate {
+    func contentCollectionManagerDidSelectedContent(collectionManager: ContentCollectionManager, contentSelected: Photo) {
+        
+    }
+    
+    func contentCollectionManagerDidScrollToEnd(collectionManager: ContentCollectionManager) {
+
+    }
 }

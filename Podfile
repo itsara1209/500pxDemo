@@ -9,10 +9,10 @@ target 'Demo500px' do
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'SwiftyJSON'
 pod 'IQKeyboardManagerSwift'
-pod 'Kingfisher'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'Alamofire'
+pod 'SDWebImage', '~>3.8'
 
   target 'Demo500pxTests' do
     inherit! :search_paths

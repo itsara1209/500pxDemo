@@ -4,8 +4,10 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
   - IQKeyboardManagerSwift (4.0.8)
-  - Kingfisher (3.3.4)
   - MBProgressHUD (1.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -13,8 +15,8 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - IQKeyboardManagerSwift
-  - Kingfisher
   - MBProgressHUD (~> 1.0.0)
+  - SDWebImage (~> 3.8)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -22,10 +24,10 @@ SPEC CHECKSUMS:
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
-  Kingfisher: 35f289f015d26e81ea6c85048718c6205f3933c6
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f1c7c5f24fac4d7d8ab608e0a96dc362a6a6f410
+PODFILE CHECKSUM: a09f1e005da99bd2b7c0fcddb80dcf1cf979f980
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0
