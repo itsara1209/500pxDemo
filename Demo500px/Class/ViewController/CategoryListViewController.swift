@@ -20,7 +20,6 @@ class CategoryListViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "500pxDemo"
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
